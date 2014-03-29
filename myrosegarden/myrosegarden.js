@@ -5,18 +5,18 @@ if(Meteor.isClient) {
         return Roses.find({}, {sort: { name: 1}});
     };
 
-    // Handle movieForm events
+    // Handle roseForm events
     Template.roseForm.events = {
         'submit': function (e, tmpl) {
             // Don't postback
             e.preventDefault();
 
-            // create the new movie
+            // create the new rose
             var newRose = {
                 name: tmpl.find("#name").value
             };
 
-            // add the movie to the db
+            // add the rose to the db
             Roses.insert(newRose);
         }
     };
