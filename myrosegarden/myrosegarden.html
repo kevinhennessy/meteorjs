@@ -1,0 +1,40 @@
+<head>
+    <title>My Rose Garden</title>
+</head>
+
+<body>
+<h1>My Rose Garden</h1>
+{{> roseList}}
+{{> roseForm}}
+</body>
+
+<template name="roseList">
+    {{#each roses}}
+    <ul>
+        {{> roseInfo}}
+    </ul>
+    {{else}}
+    No roses yet.
+    {{/each}}
+</template>
+<template name="roseInfo">
+    <li>
+        {{name}}
+    </li>
+</template>
+<template name="roseForm">
+    <fieldset>
+        <legend>Add New Rose</legend>
+        <form>
+            <div>
+                <label>
+                    Name:
+                    <input id="name" />
+                </label>
+            </div>
+             <div>
+                <input type="submit" value="Add Rose" />
+            </div>
+        </form>
+    </fieldset>
+</template>

@@ -1,0 +1,23 @@
+<head>
+  <title>My Rose Garden</title>
+</head>
+
+<body>
+    <h1>My Rose Garden</h1>
+  {{> rose_list}}
+</body>
+
+<template name="rose_list">
+  {{#each roses}}
+  <ul>
+     {{> rose_info}}
+  </ul>
+    {{else}}
+    No roses yet.
+    {{/each}}
+</template>
+<template name="rose_info">
+     <li>
+         {{name}}
+     </li>
+</template>
