@@ -1,4 +1,3 @@
 meteorjs
 ========
-
-MeteorJs
+Code associated with AIS blog post.
