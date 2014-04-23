@@ -1,6 +1,6 @@
 Roses = new Meteor.Collection("roses");
 
-if(Meteor.isClient) {
+if (Meteor.isClient) {
     Template.roseList.roses = function () {
         return Roses.find({}, {sort: { name: 1}});
     };
@@ -18,6 +18,9 @@ if(Meteor.isClient) {
 
             // add the rose to the db
             Roses.insert(newRose);
+
+            tmpl.find("#name").value = "";
         }
     };
-};
+}
+;
