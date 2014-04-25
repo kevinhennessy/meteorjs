@@ -22,5 +22,4 @@ if (Meteor.isClient) {
             tmpl.find("#name").value = "";
         }
     };
-}
-;
+};
